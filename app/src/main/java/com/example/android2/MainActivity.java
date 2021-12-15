@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
         et = findViewById(R.id.editText);
         et.setText("");
-        //Spinner
+        //Spinneris
         sp = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.selection_array, android.R.layout.simple_spinner_item);
+                R.array.options, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp.setAdapter(adapter);
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         tv.setText(getString(R.string.TextViewText));
         btn = findViewById(R.id.startButton);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener() { //jei paspaudziamas mygtukas
             @Override
             public void onClick(View view) {
                 String input = et.getText().toString();
@@ -50,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else{
-                    if(sp.getSelectedItem().toString().equals("Žodžiai")) {
+                    if(sp.getSelectedItem().toString().equals("Žodžiai")) { //jei pasirenka skaiciuoti zodzius
                         int count = c.WordCounter(input);
                         tv.setText(MessageFormat.format("{0} {1}", count, getString(R.string.Žodžiai)));
                         tv.setTextColor(Color.GREEN);
                     }
-                    else{
+                    else{ //jei pasirenka skaiciuoti rasybos zenklus
                         int count = c.SymbolCounter(input);
                         tv.setText(MessageFormat.format("{0} {1}", count, getString(R.string.Ženklai)));
                         tv.setTextColor(Color.BLUE);
