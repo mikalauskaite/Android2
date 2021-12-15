@@ -28,17 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_wrapBehaviorInParent="horizontal_only" /><![CDATA[
-
-    tools:visibility="visible" />
-
-
-
-
-
-
-
-    ]]>
+        app:layout_wrapBehaviorInParent="horizontal_only" />
 
     <Spinner
         android:id="@+id/spinner"
