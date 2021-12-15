@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Android2</string>
+    <string-array name="selection_array">
+        <item>@string/Žodžiai</item>
+        <item>@string/Ženklai</item>
+    </string-array>
+    <string name="Ženklai">Rašybos ženklai</string>
+    <string name="TextViewText">Įveskite tekstą</string>
+    <string name="TextViewErrorText">Jūs nieko neįvedėte. Bandykite dar kartą</string>
+    <string name="Žodžiai">Žodžiai</string>
 </resources>
